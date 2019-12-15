@@ -6,11 +6,11 @@ defmodule CredoInterpolationError do
   """
 
   def foo do
-    env_foo = Application.get_env(:credo_interpolation_error, :foo)
+    env = Application.get_env(:credo_interpolation_error, :foo)
 
-    case "#{env_foo}" do
-      "A" <> _ = env -> "🇿🇼 #{String.upcase(env_foo)}"
-      "B" <> _ = env -> "🇻🇺 #{String.upcase(env_foo)}"
+    case "#{env}" do
+      "A" <> _ = env -> "🇿🇼 #{String.upcase(env)}"
+      "B" <> _ = env -> "🇻🇺 #{String.upcase(env)}"
       env -> String.upcase(env)
     end
   end
