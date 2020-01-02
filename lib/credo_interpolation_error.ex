@@ -5,13 +5,7 @@ defmodule CredoInterpolationError do
   - otp 22.1.8
   """
 
-  def foo do
-    env = Application.get_env(:credo_interpolation_error, :foo)
-
-    case "#{env}" do
-      "A" <> _ = env -> "🇿🇼 #{String.upcase(env)}"
-      "B" <> _ = env -> "🇻🇺 #{String.upcase(env)}"
-      env -> String.upcase(env)
-    end
+  def foo(arg) do
+    "🇿🇼 #{arg}"
   end
 end
